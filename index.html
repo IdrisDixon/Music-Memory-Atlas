@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music Memory Atlas</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Idris's album</p>
+          <h1>Music Memory Atlas</h1>
+        </div>
+      </header>
+
+      <section class="workspace" aria-label="Music memory timeline">
+        <div class="map-panel">
+          <div class="memory-map" id="memoryMap">
+            <div class="timeline-line"></div>
+          </div>
+
+          <section class="song-list-panel" aria-label="Songs in selected year">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">Selected year</p>
+                <h2 id="selectedYearTitle">2023</h2>
+              </div>
+              <span id="selectedYearCount">7 songs</span>
+            </div>
+            <div class="song-list" id="songList"></div>
+          </section>
+        </div>
+
+        <aside class="story-panel" aria-live="polite">
+          <p class="eyebrow" id="memoryDate">Autumn 2021</p>
+          <h2 id="memoryTitle">Midnight Bus Window</h2>
+          <p class="artist" id="memoryArtist">The Paper Kites</p>
+          <p class="story" id="memoryStory">
+            A slow ride through a sleeping city, headphones low, the glass holding every streetlight like a small promise.
+          </p>
+
+          <div class="meta-row">
+            <span id="memoryPlace">City bus</span>
+          </div>
+
+          <div class="source-actions" id="playerFrame"></div>
+        </aside>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
