@@ -68,7 +68,7 @@ const storyPanel = document.querySelector(".story-panel");
 
 let selectedYear = years[0].year;
 
-function song(id, title, artist, year, query, spotifyUrl = "") {
+function song(id, title, artist, year, query, spotifyUrl = "", story = "") {
   return {
     id,
     title,
@@ -76,7 +76,7 @@ function song(id, title, artist, year, query, spotifyUrl = "") {
     year,
     query,
     place: `${year} archive`,
-    story: "A placeholder memory note. Add the real story here when you are ready.",
+    story: story || "Memory note coming soon.",
     spotifyUrl,
     spotifySearch: `https://open.spotify.com/search/${encodeURIComponent(query)}`,
     spotifyEmbed: getSpotifyEmbed(spotifyUrl),
